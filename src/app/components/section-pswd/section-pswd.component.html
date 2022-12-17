@@ -1,0 +1,25 @@
+<form class="form">
+    <div [ngClass]="newstyle" class="form__part form-main">
+        <label class="form-main__label" for="password">Start creating your password here</label>
+        <input (input)="checkPassword(password)" class="form-main__input" type="{{type}}" name="password"
+            [(ngModel)]="password" id="password" placeholder="Type here">
+        <div class="form-main__btn btn"><button (click)="changeVisibility()" class="btn__body" type="button">
+                <fa-icon class="btn__icon" *ngIf="!visible" [icon]="eye"></fa-icon>
+                <fa-icon class="btn__icon" *ngIf="visible" [icon]="eyeCross"></fa-icon></button>
+        </div>
+        <div *ngIf="password" class="form__check">Your password is <span class="form__italic">
+                {{msg}}
+            </span></div>
+    </div>
+    <div [ngClass]="newstyle" class="form__part text">
+        <div class="text__section">
+            Password has only letters/digits/symbols
+        </div>
+        <div class="text__section">
+            Password has combination of letters-symbols/letters-digits/digits-symbols
+        </div>
+        <div class="text__section">
+            Password has everything - letters, symbols and numbers
+        </div>
+    </div>
+</form>

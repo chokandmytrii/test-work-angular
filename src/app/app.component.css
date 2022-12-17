@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.popup {
+  background-color: #D8D8D8;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  font-family: 'Lato', Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 5px 20px 3px grey;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: aliceblue;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 60px 15px 65px;
+  border-radius: 15px;
+}
